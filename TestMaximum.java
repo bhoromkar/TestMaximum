@@ -3,9 +3,9 @@ import java.util.*;
 public class TestMaximum {
 
     public static void main(String[] args) {
-        Float obj1 = (20.37F);
-        Float obj2 = (98.15F);
-        Float obj3 = (35.21f);
+        String obj1 = ("apple");
+        String obj2 = ("mango");
+        String obj3 = ("banana");
         if(obj1.compareTo(obj2)>0 && (obj1.compareTo(obj3)>0)){
             System.out.println(obj1);
         }else if(obj2.compareTo(obj3)>0){
