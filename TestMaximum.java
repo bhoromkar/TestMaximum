@@ -1,25 +1,47 @@
 package com.bridgelabz.testmaximum;
-import java.util.*;
-public class TestMaximum {
-    public static <T extends Comparable<T>> T maximum(T x, T y, T z) {
-        T max;
-        if(x.compareTo(y)>0 && (x.compareTo(z)>0)){
-           max=x;
-        }else if(y.compareTo(z)>0){
-           max=y;
-        }else{
-          max=z;
-        }
-        return max; // returns the largest object
+
+
+public class TestMaximum<T extends Comparable> {
+    T x;
+    T y;
+    T z;
+
+    public TestMaximum(T x, T y, T z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
     }
 
-    public static void main(String args[]) {
-        System.out.printf( "Maximum is "+ maximum(3, 4, 5));
-        System.out.println();
-        System.out.printf("Maximum is " + maximum(6.6, 8.8, 7.7));
-        System.out.println();
-        System.out.printf( "Maximum is " +maximum("apple", "mango", "banana"));
+
+    public T getX() {
+        return x;
     }
+
+    public void setX(T x) {
+        this.x = x;
+    }
+
+    public T getY() {
+        return y;
+    }
+
+    public void setY(T y) {
+        this.y = y;
+    }
+
+    public T getZ() {
+        return z;
+    }
+
+    public void setZ(T z) {
+        this.z = z;
+    }
+    <T>  T testMaxNum(){
+        T maximum = (T) MaxVaLue.maximum(x, y, z);
+        return maximum;
+    }
+
+
 }
 
 
